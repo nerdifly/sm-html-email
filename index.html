@@ -18,6 +18,13 @@
         background-color: #f9f9f9;
         font-size: 14px;
         line-height: 1.6;
+        transition: box-shadow 0.3s;
+        position: relative;
+        animation: fadeIn 1s ease-in;
+      }
+
+      .signature-container:hover {
+        box-shadow: 0px 0px 15px rgba(0, 51, 102, 0.3);
       }
 
       .signature-header {
@@ -25,10 +32,12 @@
         font-weight: bold;
         color: #003366;
         margin-bottom: 10px;
+        animation: slideIn 1s ease-out;
       }
 
       .signature-details p {
         margin: 5px 0;
+        animation: fadeUp 0.8s ease-in-out;
       }
 
       .signature-details p span {
@@ -44,6 +53,7 @@
       .contact-info {
         font-size: 12px;
         color: #666666;
+        animation: fadeUp 0.8s ease-in-out;
       }
 
       .social-icons {
@@ -56,35 +66,64 @@
         text-decoration: none;
         color: #003366;
         font-size: 16px;
-        transition: color 0.3s;
+        transition: color 0.3s, transform 0.3s;
       }
 
       .social-icons a:hover {
         color: #1e90ff;
+        transform: scale(1.1);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
     </style>
   </head>
 
   <body>
     <div class="signature-container">
-      <div class="signature-header">[Jouw Naam]</div>
+      <div class="signature-header">Met vriendelijke groeten,</div>
 
       <div class="signature-details">
-        <p><span>Student:</span> [Jouw Studie]</p>
-        <p><span>Instelling:</span> [Naam van de Universiteit/School]</p>
+        <p>Pablo Van der Sande</p>
+        <p><span>Klas:</span> 3D</p>
+        <p><span>Richting:</span> Natuurwetenschappen</p>
       </div>
 
       <div class="divider"></div>
 
       <div class="contact-info">
-        <p>Email: <a href="mailto:jouw.email@example.com">jouw.email@example.com</a></p>
-        <p>Telefoon: +31 6 12345678</p>
-      </div>
-
-      <div class="social-icons">
-        <a href="https://linkedin.com">LinkedIn</a>
-        <a href="https://github.com">GitHub</a>
-        <a href="https://twitter.com">Twitter</a>
+        <p>Email: <a href="mailto:pablovandersande@bapitzemburg.be">pablovandersande@bapitzemburg.be</a></p>
       </div>
     </div>
   </body>

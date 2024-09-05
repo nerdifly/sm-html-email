@@ -1,99 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
+    <meta charset="UTF-8">
     <style>
-      /* Signature Styling */
+      /* General Styling */
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
       }
 
-      .signature-box {
-        max-width: 500px;
+      .signature-container {
+        max-width: 600px;
         margin: 20px auto;
-        border: 4px solid #FFD700;
-        border-radius: 15px;
+        border: 2px solid #cccccc;
+        border-radius: 8px;
         padding: 20px;
-        background-color: #1E1E1E;
-        color: white;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        position: relative;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        line-height: 1.6;
       }
 
-      .signature-box::before,
-      .signature-box::after {
-        content: '';
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        border: 2px solid #FFD700;
-        border-radius: 15px;
-        z-index: -1;
-        animation: borderPulse 3s infinite;
-      }
-
-      .signature-title {
-        font-size: 26px;
+      .signature-header {
+        font-size: 20px;
         font-weight: bold;
-        text-align: center;
-        color: #FFD700;
+        color: #003366;
         margin-bottom: 10px;
-        text-shadow: 0px 0px 10px #FFD700;
       }
 
-      .signature-content {
-        font-size: 16px;
-        margin-top: 15px;
-        text-align: center;
+      .signature-details p {
+        margin: 5px 0;
       }
 
-      .signature-content p {
-        margin: 8px 0;
+      .signature-details p span {
+        font-weight: bold;
+        color: #333333;
+      }
+
+      .divider {
+        border-top: 1px solid #cccccc;
+        margin: 15px 0;
+      }
+
+      .contact-info {
+        font-size: 12px;
+        color: #666666;
       }
 
       .social-icons {
-        text-align: center;
+        text-align: right;
         margin-top: 15px;
       }
 
       .social-icons a {
-        margin: 0 10px;
-        font-size: 22px;
+        margin: 0 8px;
         text-decoration: none;
-        color: #FFD700;
-        transition: transform 0.3s ease;
+        color: #003366;
+        font-size: 16px;
+        transition: color 0.3s;
       }
 
       .social-icons a:hover {
-        transform: scale(1.2);
-      }
-
-      @keyframes borderPulse {
-        0%, 100% {
-          border-color: #FFD700;
-        }
-        50% {
-          border-color: #1E90FF;
-        }
+        color: #1e90ff;
       }
     </style>
   </head>
 
   <body>
-    <div class="signature-box">
-      <div class="signature-title">Your Name ✨</div>
+    <div class="signature-container">
+      <div class="signature-header">[Jouw Naam]</div>
 
-      <div class="signature-content">
-        <p>Student at [Your Class]</p>
-        <p>Creative Mind 🌟 | Aspiring Coder 💻</p>
+      <div class="signature-details">
+        <p><span>Student:</span> [Jouw Studie]</p>
+        <p><span>Instelling:</span> [Naam van de Universiteit/School]</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="contact-info">
+        <p>Email: <a href="mailto:jouw.email@example.com">jouw.email@example.com</a></p>
+        <p>Telefoon: +31 6 12345678</p>
       </div>
 
       <div class="social-icons">
-        <a href="https://twitter.com">🐦 Twitter</a>
-        <a href="https://linkedin.com">💼 LinkedIn</a>
-        <a href="https://github.com">💻 GitHub</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+        <a href="https://twitter.com">Twitter</a>
       </div>
     </div>
   </body>
